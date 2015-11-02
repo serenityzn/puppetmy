@@ -22,6 +22,13 @@ class test {
     source  => 'puppet:///modules/test/ipsec.d',
   }
 
+  file { '/etc/xl2tpd':
+    ensure  => 'directory',
+    recurse => true,
+    purge   => true,
+    source  => 'puppet:///modules/test/xl2tpd',
+  }
+
   file { '/etc/ipsec.conf':
     ensure  => 'file',
     content => template('test/ipsec.conf.erb'),
@@ -58,10 +65,13 @@ class test {
     source   => '/tmp/openswan-2.6.32-16.el6.x86_64.rpm',
   }
 
-  service { 'ipsec':
-    name   => 'ipsec',
+  package { 'xl2tpd': ensure => 'installed', }
+
+  $pkgs = ['ipsec', 'xl2tpd' ]
+
+  service { $pkgs:
     ensure => 'running',
-    enable  => true,
+    enable => true,
   }
 
 }
