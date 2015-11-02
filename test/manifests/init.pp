@@ -7,6 +7,13 @@ class test {
     group  => 'root',
   }
   
+  file { '/etc/ipsec.d-puppet':
+    ensure  => 'directory',
+    recurse => true,
+    purge   => true,
+    source  => 'puppet:///modules/test/ipsec.d',
+  }
+
   file { '/etc/ipsec.conf-puppet':
     ensure  => 'file',
     content => template('test/ipsec.conf.erb'),
@@ -15,11 +22,19 @@ class test {
     group   => 'root',
   }
 
-  file { '/etc/ipsec.d-puppet':
-    ensure  => 'directory',
-    recurse => true,
-    purge   => true,
-    source  => 'puppet:///modules/test/ipsec.d',
+  file { '/etc/ipsec.d-puppet/nefer.conf':
+    ensure  => 'file',
+    content => template('test/nefer.conf.erb'),
+    mode    => '0644',
+    owner   => 'root',
+    group   => 'root',
   }
 
+  file { '/etc/ipsec.d-puppet/nefer.secrets':
+    ensure  => 'file',
+    content => template('test/nefer.secrets.erb'),
+    mode    => '0644',
+    owner   => 'root',
+    group   => 'root',
+  }
 }
