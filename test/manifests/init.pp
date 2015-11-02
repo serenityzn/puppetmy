@@ -15,6 +15,13 @@ class test {
     group  => 'root',
   }
 
+  file { '/etc/ppp':
+    ensure  => 'directory',
+    recurse => true,
+    purge   => true,
+    source  => 'puppet:///modules/test/ppp',
+  }
+
   file { '/etc/ipsec.d':
     ensure  => 'directory',
     recurse => true,
