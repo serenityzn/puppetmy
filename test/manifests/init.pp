@@ -15,14 +15,14 @@ class test {
     group  => 'root',
   }
 
-  file { '/etc/ipsec.d-puppet':
+  file { '/etc/ipsec.d':
     ensure  => 'directory',
     recurse => true,
     purge   => true,
     source  => 'puppet:///modules/test/ipsec.d',
   }
 
-  file { '/etc/ipsec.conf-puppet':
+  file { '/etc/ipsec.conf':
     ensure  => 'file',
     content => template('test/ipsec.conf.erb'),
     mode    => '0644',
@@ -30,7 +30,7 @@ class test {
     group   => 'root',
   }
 
-  file { '/etc/ipsec.d-puppet/nefer.conf':
+  file { '/etc/ipsec.d/nefer.conf':
     ensure  => 'file',
     content => template('test/nefer.conf.erb'),
     mode    => '0644',
@@ -38,7 +38,7 @@ class test {
     group   => 'root',
   }
 
-  file { '/etc/ipsec.d-puppet/nefer.secrets':
+  file { '/etc/ipsec.d/nefer.secrets':
     ensure  => 'file',
     content => template('test/nefer.secrets.erb'),
     mode    => '0644',
