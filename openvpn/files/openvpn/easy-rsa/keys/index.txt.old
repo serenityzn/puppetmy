@@ -1,0 +1,6 @@
+V	250628204254Z		01	unknown	/C=UA/ST=UA/L=Kyiv/O=Kyiv/OU=MyOrganizationalUnit/CN=server/name=nefertest/emailAddress=me@myhost.mydomain
+V	250628204327Z		02	unknown	/C=UA/ST=UA/L=Kyiv/O=Kyiv/OU=MyOrganizationalUnit/CN=client/name=nefertest/emailAddress=me@myhost.mydomain
+V	250723034435Z		04	unknown	/C=KG/ST=NA/O=OpenVPN-TEST/CN=Test-Client/emailAddress=me@myhost.mydomain
+V	250724054226Z		D46CDA38286443FE8D6F6180	unknown	/C=UA/ST=UA/L=Kyiv/O=Kyiv/OU=MyOrganizationalUnit/CN=anna/name=nefertest/emailAddress=me@myhost.mydomain
+V	250724055539Z		647989D44E27FEF4EC19630B	unknown	/C=UA/ST=UA/L=Kyiv/O=Kyiv/OU=MyOrganizationalUnit/CN=nefer/name=nefertest/emailAddress=me@myhost.mydomain
+R	250724060058Z	150727061432Z	66CC0885A7CC24E20B817BC0	unknown	/C=UA/ST=UA/L=Kyiv/O=Kyiv/OU=UkraineVPN/CN=lapada/emailAddress=zn@example.com

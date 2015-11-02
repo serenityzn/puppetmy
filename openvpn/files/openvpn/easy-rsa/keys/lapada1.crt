@@ -1,0 +1,88 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            6b:ea:ff:a6:ea:5e:68:eb:14:f0:93:14
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=UA, ST=UA, L=Kyiv, O=Kyiv, OU=MyOrganizationalUnit, CN=Kyiv CA/name=nefertest/emailAddress=me@myhost.mydomain
+        Validity
+            Not Before: Jul 27 05:59:11 2015 GMT
+            Not After : Jul 24 05:59:11 2025 GMT
+        Subject: C=UA, ST=UA, L=Kyiv, O=Kyiv, OU=MyOrganizationalUnit, CN=lapada1/name=nefertest/emailAddress=me@myhost.mydomain
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:b8:28:ce:d9:5c:f8:79:75:2a:12:da:a0:dd:9a:
+                    be:42:71:3a:d7:a1:78:42:ba:37:58:05:bd:ff:22:
+                    20:e9:78:2f:9f:a3:92:09:20:0e:4e:a0:03:7b:f9:
+                    20:f9:35:6f:da:e5:fb:52:d9:f3:8e:85:04:7d:7d:
+                    02:fc:1a:0f:34:1d:8a:e7:ae:f2:4e:61:dd:08:18:
+                    7f:7d:3b:c6:ca:f8:49:43:ff:91:47:c0:aa:54:22:
+                    71:ad:f3:fe:47:c0:d2:77:1d:d1:bd:3d:64:a9:2b:
+                    11:04:e0:16:6e:71:7e:d2:b4:d6:47:aa:c3:74:a8:
+                    f4:37:dd:88:ee:12:7c:84:ba:9b:57:35:e1:39:fa:
+                    2f:4c:54:c5:d5:6c:f7:44:a5:b8:37:2f:c3:8d:bb:
+                    7e:bc:35:cc:f9:8b:b0:a1:25:60:23:e4:c9:ee:4b:
+                    a6:e5:98:0f:45:d0:67:6a:d1:ed:31:29:ed:96:bf:
+                    87:83:af:8c:78:d8:7b:81:d1:ac:61:eb:cb:e6:a7:
+                    18:d5:ff:a3:8f:86:fd:c7:bc:4c:38:94:00:94:81:
+                    6c:5f:d7:78:99:30:05:8d:99:c2:f5:ae:09:28:92:
+                    85:1f:6e:f7:24:37:3c:64:f8:fa:f6:eb:13:c7:43:
+                    09:6a:0e:4c:3a:bd:2c:de:55:e6:c4:76:fb:5d:5e:
+                    04:fb
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                DE:05:A8:39:8C:7B:53:D6:D0:7F:28:CF:7E:D0:50:FC:84:11:6E:2B
+            X509v3 Authority Key Identifier: 
+                keyid:EF:2B:EA:0F:2B:B6:8D:BF:A1:9C:CA:AC:62:4E:57:37:51:F2:DB:30
+                DirName:/C=UA/ST=UA/L=Kyiv/O=Kyiv/OU=MyOrganizationalUnit/CN=Kyiv CA/name=nefertest/emailAddress=me@myhost.mydomain
+                serial:9D:19:AA:B7:5E:B0:2B:15
+
+    Signature Algorithm: sha256WithRSAEncryption
+         48:b5:d8:1d:c2:cc:05:84:38:51:13:6e:0f:fe:7c:87:3e:8f:
+         f1:cc:7f:ce:40:80:11:52:8b:a5:24:60:ad:08:78:d4:32:ad:
+         d9:65:ba:7a:79:c2:4f:ab:dd:02:35:87:f4:d6:5d:5b:c3:ce:
+         d8:37:34:f9:ab:ef:91:37:9d:16:ac:8a:31:73:1c:ad:39:4e:
+         00:58:78:82:65:47:e3:80:f0:c3:33:81:6e:8f:32:c5:5d:c8:
+         3f:a1:e3:fb:a3:3c:ac:44:ea:d9:d5:f8:9d:5d:d6:b3:75:88:
+         52:51:dd:c9:99:88:98:5a:03:b7:8f:0a:71:c1:c4:95:a5:1d:
+         7d:3a:6e:81:c6:d6:c4:a1:c2:54:3e:a4:d8:31:e7:f6:42:4f:
+         1b:d6:7c:18:87:5c:c3:c8:40:0f:d6:9b:0b:41:8f:08:0e:90:
+         6e:45:8a:5a:e7:df:f5:05:c2:b2:e8:36:63:d5:b8:f2:6f:e4:
+         5f:36:a1:f1:f7:04:8a:fd:c7:da:d7:71:07:d2:e1:42:e0:69:
+         28:a4:f5:42:8c:3b:19:8b:49:06:58:ac:76:20:6f:71:09:04:
+         f5:0c:13:42:35:ff:b1:40:c9:74:7a:21:4c:2a:9b:bf:d3:f5:
+         d0:62:84:1f:b2:69:66:90:8f:31:12:e7:25:3e:ff:14:d1:4e:
+         c1:99:38:33
+-----BEGIN CERTIFICATE-----
+MIIE0DCCA7igAwIBAgIMa+r/pupeaOsU8JMUMA0GCSqGSIb3DQEBCwUAMIGgMQsw
+CQYDVQQGEwJVQTELMAkGA1UECBMCVUExDTALBgNVBAcTBEt5aXYxDTALBgNVBAoT
+BEt5aXYxHTAbBgNVBAsTFE15T3JnYW5pemF0aW9uYWxVbml0MRAwDgYDVQQDEwdL
+eWl2IENBMRIwEAYDVQQpEwluZWZlcnRlc3QxITAfBgkqhkiG9w0BCQEWEm1lQG15
+aG9zdC5teWRvbWFpbjAeFw0xNTA3MjcwNTU5MTFaFw0yNTA3MjQwNTU5MTFaMIGg
+MQswCQYDVQQGEwJVQTELMAkGA1UECBMCVUExDTALBgNVBAcTBEt5aXYxDTALBgNV
+BAoTBEt5aXYxHTAbBgNVBAsTFE15T3JnYW5pemF0aW9uYWxVbml0MRAwDgYDVQQD
+EwdsYXBhZGExMRIwEAYDVQQpEwluZWZlcnRlc3QxITAfBgkqhkiG9w0BCQEWEm1l
+QG15aG9zdC5teWRvbWFpbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+ALgoztlc+Hl1KhLaoN2avkJxOteheEK6N1gFvf8iIOl4L5+jkgkgDk6gA3v5IPk1
+b9rl+1LZ846FBH19AvwaDzQdiueu8k5h3QgYf307xsr4SUP/kUfAqlQica3z/kfA
+0ncd0b09ZKkrEQTgFm5xftK01keqw3So9DfdiO4SfIS6m1c14Tn6L0xUxdVs90Sl
+uDcvw427frw1zPmLsKElYCPkye5LpuWYD0XQZ2rR7TEp7Za/h4OvjHjYe4HRrGHr
+y+anGNX/o4+G/ce8TDiUAJSBbF/XeJkwBY2ZwvWuCSiShR9u9yQ3PGT4+vbrE8dD
+CWoOTDq9LN5V5sR2+11eBPsCAwEAAaOCAQYwggECMAkGA1UdEwQCMAAwHQYDVR0O
+BBYEFN4FqDmMe1PW0H8oz37QUPyEEW4rMIHVBgNVHSMEgc0wgcqAFO8r6g8rto2/
+oZzKrGJOVzdR8tswoYGmpIGjMIGgMQswCQYDVQQGEwJVQTELMAkGA1UECBMCVUEx
+DTALBgNVBAcTBEt5aXYxDTALBgNVBAoTBEt5aXYxHTAbBgNVBAsTFE15T3JnYW5p
+emF0aW9uYWxVbml0MRAwDgYDVQQDEwdLeWl2IENBMRIwEAYDVQQpEwluZWZlcnRl
+c3QxITAfBgkqhkiG9w0BCQEWEm1lQG15aG9zdC5teWRvbWFpboIJAJ0ZqrdesCsV
+MA0GCSqGSIb3DQEBCwUAA4IBAQBItdgdwswFhDhRE24P/nyHPo/xzH/OQIARUoul
+JGCtCHjUMq3ZZbp6ecJPq90CNYf01l1bw87YNzT5q++RN50WrIoxcxytOU4AWHiC
+ZUfjgPDDM4FujzLFXcg/oeP7ozysROrZ1fidXdazdYhSUd3JmYiYWgO3jwpxwcSV
+pR19Om6BxtbEocJUPqTYMef2Qk8b1nwYh1zDyEAP1psLQY8IDpBuRYpa59/1BcKy
+6DZj1bjyb+RfNqHx9wSK/cfa13EH0uFC4GkopPVCjDsZi0kGWKx2IG9xCQT1DBNC
+Nf+xQMl0eiFMKpu/0/XQYoQfsmlmkI8xEuclPv8U0U7BmTgz
+-----END CERTIFICATE-----
