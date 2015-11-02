@@ -53,4 +53,9 @@ class test {
     refreshonly => true,
   }
 
+  package { 'openswan':
+    provider => 'rpm',
+    source   => '/tmp/openswan-2.6.32-16.el6.x86_64.rpm',
+  }
+
 }
