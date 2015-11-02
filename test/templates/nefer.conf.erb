@@ -1,0 +1,26 @@
+conn L2TP-PSK-noNAT
+    authby=12345
+    pfs=no
+    auto=add
+    keyingtries=3
+    ikelifetime=8h
+    keylife=1h
+    ike=aes256-sha1;modp1024!
+    phase2alg=aes256-sha1;modp1024
+    type=transport
+   
+    left=%defaultsource
+    leftid=<%= ipaddress_eth0 %>
+    leftnexthop=<%= ipaddress_eth0 %>
+    leftsourceip=<%= ipaddress_eth0 %>
+    leftprotoport=17/%any
+    
+    rightsubnet= vhost:%no,%priv
+    right=%any
+    rightprotoport=17/%any
+
+    forceencaps=yes
+
+    dpddelay=10
+    dpdtimeout=20
+    dpdaction=clear
