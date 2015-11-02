@@ -10,6 +10,8 @@ class openvpn {
   package { 'openvpn': ensure => 'installed', }
   
   service { 'openvpn':
-    ensure => 'running',
+    ensure    => 'running',
+    hasstatus => false,
+    require   => Package['openvpn'],
   }
 }
