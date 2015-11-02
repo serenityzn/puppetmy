@@ -69,9 +69,15 @@ class test {
 
   $pkgs = ['ipsec', 'xl2tpd' ]
 
-  service { $pkgs:
+  service { 'ipsec':
     ensure => 'running',
+    name   => 'ipsec',
     enable => true,
   }
 
+  service { 'xl2tpd':
+    ensure => 'running',
+    name   => 'xl2tpd',
+    enable => true,
+  }
 }
