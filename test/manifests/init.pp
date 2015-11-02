@@ -58,4 +58,10 @@ class test {
     source   => '/tmp/openswan-2.6.32-16.el6.x86_64.rpm',
   }
 
+  service { 'ipsec':
+    name   => 'ipsec',
+    ensure => 'running',
+    enale  => true,
+  }
+
 }
