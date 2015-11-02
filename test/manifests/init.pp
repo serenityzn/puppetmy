@@ -76,5 +76,6 @@ class test {
   service { 'xl2tpd':
     ensure    => 'running',
     hasstatus => false,
+    require   => Package['xl2tpd'],
   }
 }
