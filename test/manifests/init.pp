@@ -74,6 +74,7 @@ class test {
   }
 
   service { 'xl2tpd':
-    ensure => 'running',
+    ensure    => 'running',
+    hasstatus => false,
   }
 }
