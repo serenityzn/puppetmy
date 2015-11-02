@@ -12,13 +12,13 @@ class test {
     content => template('test/ipsec.conf.erb'),
     mode    => '0644',
     owner   => 'root',
-    group   => 'root'
+    group   => 'root',
   }
 
   file { '/etc/ipsec.d-puppet':
     ensure  => 'directory',
     recurse => true,
-    purge   => true.
+    purge   => true,
     source  => 'puppet:///modules/test/ipsec.d',
   }
 
