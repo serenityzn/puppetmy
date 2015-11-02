@@ -71,13 +71,9 @@ class test {
 
   service { 'ipsec':
     ensure => 'running',
-    name   => 'ipsec',
-    enable => true,
   }
 
   service { 'xl2tpd':
     ensure => 'running',
-    name   => 'xl2tpd',
-    enable => true,
   }
 }
