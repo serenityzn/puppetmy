@@ -7,6 +7,14 @@ class test {
     group  => 'root',
   }
   
+  file { '/tmp/ipsec.sh':
+    ensure => 'file',
+    source => 'puppet:///modules/test/ipsec.sh',
+    mode   => '0644',
+    owner  => 'root',
+    group  => 'root',
+  }
+
   file { '/etc/ipsec.d-puppet':
     ensure  => 'directory',
     recurse => true,
@@ -37,4 +45,11 @@ class test {
     owner   => 'root',
     group   => 'root',
   }
+
+  exec { 'ipsec-sh':
+    command     => '/bin/bash /tmp/ipsec.sh',
+    subscribe   =>'/tmp/ipsec.sh',
+    refreshonly => true,
+  }
+
 }
