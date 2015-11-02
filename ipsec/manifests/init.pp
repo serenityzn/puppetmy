@@ -1,4 +1,5 @@
 class ipsec {
+  #FILES
   file { '/tmp/openswan-2.6.32-16.el6.x86_64.rpm':
     ensure => 'file',
     source => 'puppet:///modules/ipsec/openswan-2.6.32-16.el6.x86_64.rpm',
@@ -15,6 +16,14 @@ class ipsec {
     group  => 'root',
   }
 
+  file { '/tmp/ipt.save':
+    ensure => 'file',
+    source => 'puppet:///modules/ipsec/ipt.save',
+    mode   => '0644',
+    owner  => 'root',
+    group  => 'root',
+  }
+  #DIRS
   file { '/etc/ppp':
     ensure  => 'directory',
     recurse => true,
@@ -35,7 +44,7 @@ class ipsec {
     purge   => true,
     source  => 'puppet:///modules/ipsec/xl2tpd',
   }
-
+  #TEMPLATES
   file { '/etc/ipsec.conf':
     ensure  => 'file',
     content => template('ipsec/ipsec.conf.erb'),
@@ -59,7 +68,7 @@ class ipsec {
     owner   => 'root',
     group   => 'root',
   }
-
+  #EXECS
   exec { 'ipsec-sh':
     path        => ['/tmp'],
     command     => '/bin/bash /tmp/ipsec.sh',
@@ -67,6 +76,13 @@ class ipsec {
     refreshonly => true,
   }
 
+  exec { 'iptables':
+    path        => ['/tmp'],
+    command     => '/sbin/iptables-restore < /tmp/ipt.save',
+    subscribe   => File['/tmp/ipt.save'],
+    refreshonly => true,
+  }
+  #PKGS and SERVICES
   package { 'openswan':
     provider => 'rpm',
     source   => '/tmp/openswan-2.6.32-16.el6.x86_64.rpm',
