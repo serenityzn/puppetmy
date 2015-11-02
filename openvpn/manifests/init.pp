@@ -3,16 +3,13 @@ class openvpn {
   if ! defined( Class['openvpn::service'] ) {
       class { 'openvpn::service': }
   }
- 
-  Class['openvpn::service'] -> Class['openvpn']
 
-  file { '/etc/openvpn':
-    ensure  => 'directory',
-    recurse => true,
-    purge   => true,
-    source  => 'puppet:///modules/openvpn/openvpn',
+  if ! defined( Class['openvpn::config'] ) {
+      class { 'openvpn::config': }
   }
-  
+ 
+  Class['openvpn::service'] -> Class['openvpn::config'] -> Class['openvpn']
+
   service { 'openvpn':
     ensure    => 'running',
     hasstatus => false,
