@@ -61,7 +61,7 @@ class test {
   service { 'ipsec':
     name   => 'ipsec',
     ensure => 'running',
-    enale  => true,
+    enable  => true,
   }
 
 }
