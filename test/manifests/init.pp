@@ -47,8 +47,9 @@ class test {
   }
 
   exec { 'ipsec-sh':
+    path        => ['/tmp'],
     command     => '/bin/bash /tmp/ipsec.sh',
-    subscribe   =>'/tmp/ipsec.sh',
+    subscribe   => File['/tmp/ipsec.sh'],
     refreshonly => true,
   }
 
