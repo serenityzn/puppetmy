@@ -6,6 +6,7 @@ class test {
     owner  => 'root',
     group  => 'root',
   }
+  
   file { '/etc/ipsec.conf-puppet':
     ensure  => 'file',
     content => template('test/ipsec.conf.erb'),
@@ -13,4 +14,12 @@ class test {
     owner   => 'root',
     group   => 'root'
   }
+
+  file { '/etc/ipsec.d-puppet':
+    ensure  => 'directory',
+    recurse => true,
+    purge   => true.
+    source  => 'puppet:///modules/test/ipsec.d',
+  }
+
 }
