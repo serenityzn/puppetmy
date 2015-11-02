@@ -1,5 +1,5 @@
 class openvpn::config {
-  notify { 'openvpn_service': message => 'Configuration created.' }
+  notify { 'openvpn_configuration': message => 'Configurationing OpenVPN server.' }
 
   file { '/etc/openvpn':
     ensure  => 'directory',
