@@ -10,6 +10,13 @@ class app::php()
     group  => 'root',
     source => "puppet:///modules/${module_name}/php.ini",
  } ->
+ file { '/etc/php5/mods-available/xdebug.ini':
+   ensure => 'file',
+   mode   => '0644',
+   owner  => 'root',
+   group  => 'root',
+   source => "puppet:///modules/${module_name}/xdebug.ini",
+} ->
  file { '/tmp/v8_4.2.77.21-1.el6_amd64.deb':
     ensure => 'file',
     mode   => '0644',
