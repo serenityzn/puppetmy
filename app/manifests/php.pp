@@ -9,7 +9,49 @@ class app::php()
     owner  => 'root',
     group  => 'root',
     source => "puppet:///modules/${module_name}/php.ini",
- }
+ } ->
+ file { '/tmp/v8_4.2.77.21-1.el6_amd64.deb':
+    ensure => 'file',
+    mode   => '0644',
+    owner  => 'root',
+    group  => 'root',
+    source => "puppet:///modules/${module_name}/v8_4.2.77.21-1.el6_amd64.deb",
+ } ->
+ file { '/tmp/v8-devel_4.2.77.21-1.el6_amd64.deb':
+    ensure => 'file',
+    mode   => '0644',
+    owner  => 'root',
+    group  => 'root',
+    source => "puppet:///modules/${module_name}/v8-devel_4.2.77.21-1.el6_amd64.deb",
+ } ->
+ package { 'v8':
+  ensure   => 'installed',
+  provider => 'dpkg',
+  source   => '/tmp/v8_4.2.77.21-1.el6_amd64.deb';
+ 'v8-devel':
+  ensure   => 'installed',
+  provider => 'dpkg',
+  source   => '/tmp/v8-devel_4.2.77.21-1.el6_amd64.deb',
+ } ->
+ file {'/usr/lib/libv8_libplatform.a':
+  ensure => 'link',
+  target => '/usr/lib64/libv8_libplatform.a';
+ '/usr/lib/libv8.so':
+  ensure => 'link',
+  target => '/usr/lib64/libv8.so';
+ '/usr/lib/libv8.so.4':
+  ensure => 'link',
+  target => '/usr/lib64/libv8.so.4';
+ '/usr/lib/libv8.so.4.2':
+  ensure => 'link',
+  target => '/usr/lib64/libv8.so.4.2';
+ '/usr/lib/libicui18n.so':
+  ensure => 'link',
+  target => '/usr/lib64/libicui18n.so';
+ '/usr/lib/libicuuc.so':
+  ensure => 'link',
+  target => '/usr/lib64/libicuuc.so',
+ } 
 }
 
 
