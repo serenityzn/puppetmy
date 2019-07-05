@@ -10,9 +10,9 @@ conn L2TP-PSK-noNAT
     type=transport
    
     left=%defaultsource
-    leftid=<%= ipaddress_eth0 %>
-    leftnexthop=<%= ipaddress_eth0 %>
-    leftsourceip=<%= ipaddress_eth0 %>
+    leftid=<%= ipaddress %>
+    leftnexthop=<%= ipaddress %>
+    leftsourceip=<%= ipaddress %>
     leftprotoport=17/%any
     
     rightsubnet= vhost:%no,%priv
